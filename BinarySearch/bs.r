@@ -1,9 +1,9 @@
-binarySearch <- function(arr, target) {
+binary_search <- function(arr, target) {
   low <- 1
   high <- length(arr)
   while (low <= high) {
     mid <- low + (high - low) %/% 2
-    guess = arr[mid]
+    guess <- arr[mid]
     if (guess == target) {
       return(mid)
     }
@@ -12,7 +12,6 @@ binarySearch <- function(arr, target) {
     } else {
       low <- mid + 1
     }
-
   }
   return - 1
 }
@@ -20,4 +19,4 @@ binarySearch <- function(arr, target) {
 # example
 arr <- c(1, 2, 3, 4, 5, 6, 7, 8)
 target <- 5
-print(binarySearch(arr, target)) # 5
+print(binary_search(arr, target)) # 5
